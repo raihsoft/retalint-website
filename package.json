@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Reusable Next.js + DevContainer starter for multi-tenant Raisuite client sites.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "build:pages": "npx @cloudflare/next-on-pages",
     "start": "next start",
