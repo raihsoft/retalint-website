@@ -19,7 +19,7 @@ export default function About() {
           <div className="col-12 col-lg-6">
             <div className="about-image-wrapper text-center">
               <img
-                src="/img/about-retalinternational.jpg"
+                src="https://media.raihsuite.com/RS0015/web/about-img.jpg"
                 alt="About Retal International"
                 className="img-fluid"
               />

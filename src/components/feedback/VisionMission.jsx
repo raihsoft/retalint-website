@@ -1,11 +1,11 @@
 const items = [
   {
-    icon: '/img/icons/vision.svg',
+    icon: 'https://media.raihsuite.com/RS0015/web/icons/vision.png',
     title: 'Vision',
     text: "Our vision is to be the leading provider of ICT services in the region, serving an essential role in achieving the Crown Prince's Vision 2030.",
   },
   {
-    icon: '/img/icons/mission.svg',
+    icon: 'https://media.raihsuite.com/RS0015/web/icons/mission.png',
     title: 'Mission',
     text: "Our mission is to provide the highest quality ICT services, maintaining the trust of our partners and customers, and sustaining growth in the region through advancing and expanding its ICT market.",
   },
