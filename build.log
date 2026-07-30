@@ -1,0 +1,86 @@
+  ▲ Next.js 14.2.5
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in d:\retalint-website\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'D:\retalint-website\node_modules\typescript\lib\typescript.js', but to 'd:\retalint-website\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected D:\retalint-website\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in d:\retalint-website\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'D:\retalint-website\node_modules\typescript\lib\typescript.js', but to 'd:\retalint-website\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected D:\retalint-website\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\handle-externals.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\handle-externals.js
+<w>  at file dependencies d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs d:\retalint-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/contact/page.tsx
+6:1  Warning: There should be at least one empty line between import groups  import/order
+
+./src/components/About.jsx
+21:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/Alert.tsx
+1:8  Warning: Using exported name 'clsx' as identifier for default import.  import/no-named-as-default
+
+./src/components/feedback/Footer.jsx
+29:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/Navbar.jsx
+53:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/Products.jsx
+52:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/Services.jsx
+37:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/Stakeholders.jsx
+34:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/feedback/VisionMission.jsx
+23:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/form/TextArea.tsx
+2:8  Warning: Using exported name 'clsx' as identifier for default import.  import/no-named-as-default
+
+./src/components/form/TextField.tsx
+2:8  Warning: Using exported name 'clsx' as identifier for default import.  import/no-named-as-default
+
+./src/components/ui/Button.tsx
+2:8  Warning: Using exported name 'clsx' as identifier for default import.  import/no-named-as-default
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    136 B          87.2 kB
+├ ○ /_not-found                          875 B          87.9 kB
+├ ƒ /api/contact                         0 B                0 B
+└ ○ /contact                             24.8 kB         112 kB
++ First Load JS shared by all            87 kB
+  ├ chunks/23-e2c0d1e0c307b625.js        31.5 kB
+  ├ chunks/fd9d1056-fb22ce355db41600.js  53.7 kB
+  └ other shared chunks (total)          1.85 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -98,11 +98,13 @@ Possible approach:
 
 ### Cloudflare Pages Setup
 
-- Build command: `npx @cloudflare/next-on-pages@latest`
+- Build command: `pnpm run build:pages`
 - Output directory: `.vercel/output/static`
 - Root directory: `/`
 - Build system version: `3 (latest)`
 - Node compatibility: enable `nodejs_compat` (via Pages UI) or add `wrangler.toml`:
+
+> Note: Do not use `npx @cloudflare/next-on-pages@1` directly in Pages, because later 1.x releases can pull a `wrangler@4` peer dependency that conflicts with the compatible `@cloudflare/workers-types` range for this repo. Use `pnpm run build:pages` or pin to `@cloudflare/next-on-pages@1.12.1` instead.
 
 ```toml
 name = "raihsuite-web-starter"
