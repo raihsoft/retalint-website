@@ -1,16 +1,16 @@
 const services = [
   {
-    icon: '/img/icons/information.svg',
+    icon: 'https://media.raihsuite.com/RS0015/web/icons/information.png',
     title: 'Information',
     desc: 'Deeply involved with research and development.',
   },
   {
-    icon: '/img/icons/communication.svg',
+    icon: 'https://media.raihsuite.com/RS0015/web/icons/communication.png',
     title: 'Communication',
     desc: 'Serving innovative ideas for the communication systems.',
   },
   {
-    icon: '/img/icons/technology.svg',
+    icon: 'https://media.raihsuite.com/RS0015/web/icons/technology.png',
     title: 'Technology',
     desc: 'Creative technological solutions including Fin-tech.',
   },

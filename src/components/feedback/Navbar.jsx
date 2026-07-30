@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="nav-logo">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home') }}>
-              <img src="/img/logo.png" alt="Retal International Ltd." />
+              <img src="https://media.raihsuite.com/RS0015/web/logo-light.png" alt="Retal International Ltd." />
             </a>
           </div>
 

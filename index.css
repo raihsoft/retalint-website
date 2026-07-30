@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section {
   min-height: 100vh;
-  background-image: url('/img/background-6.jpg');
+  background-image: url('https://media.raihsuite.com/RS0015/web/retalint-hero-img.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -642,7 +642,7 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-image: url('/img/parallax.jpg');
+  background-image: url('https://media.raihsuite.com/RS0015/web/parallax.jpg');
   position: relative;
 }
 
@@ -896,4 +896,66 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-top-btn:hover {
   background: #a08830;
   transform: translateY(-3px);
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS OVERRIDES
+   ============================================ */
+
+@media (max-width: 991px) {
+  /* Reduce global section paddings on mobile */
+  .about-section, .services-section, .products-section, .stats-section, .contact-section, .stakeholders-section {
+    padding: 60px 0 !important;
+  }
+  
+  /* Hero adjustments */
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3rem) !important;
+  }
+  .hero-shape {
+    display: none !important;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 60px 0 30px !important;
+  }
+  .footer-widget {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Hero adjustments for small screens */
+  .hero-section {
+    padding-top: 60px !important;
+    min-height: 70vh !important;
+    background-position: center center !important;
+  }
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+  .hero-label {
+    font-size: 0.75rem;
+  }
+  
+  /* About Image Mobile Fixes */
+  .about-image-wrapper {
+    margin: 20px 0;
+  }
+  .about-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+  .about-image-wrapper::before {
+    /* Reduce the negative offsets so it doesn't overflow the screen horizontally */
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .about-section, .services-section, .products-section, .stats-section, .contact-section, .stakeholders-section {
+    padding: 40px 0 !important;
+  }
 }

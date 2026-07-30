@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="col-12 col-lg-4">
             <div className="footer-logo">
               <a href="#home" onClick={(e) => scrollTo(e, 'home')}>
-                <img src="/img/logo-light.png" alt="Retal International Ltd." />
+                <img src="https://media.raihsuite.com/RS0015/web/logo-light.png" alt="Retal International Ltd." />
               </a>
             </div>
             <p className="footer-desc">

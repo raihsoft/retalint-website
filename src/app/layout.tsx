@@ -4,7 +4,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Retal International Co. Ltd.',
-  description: 'Leading ICT solutions provider in Saudi Arabia'
+  description: 'Leading ICT solutions provider in Saudi Arabia',
+  icons: {
+    icon: 'https://media.raihsuite.com/RS0015/web/favicon.png'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

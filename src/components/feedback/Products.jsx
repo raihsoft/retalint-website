@@ -4,7 +4,7 @@ const products = [
     name: 'Ezhal',
     desc: 'A platform that helps our customers to get the best services through the use of an easy application that meets their immediate needs.',
     url: 'https://ezhal.com/',
-    image: '/img/products-1.jpg',
+    image: 'https://media.raihsuite.com/RS0015/web/ezhal-retalint.jpg',
     reverse: false,
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: 'Tarmeez',
     desc: 'Helping the economy by creating a new innovative financing channel that connects both SMEs and investors together through the issuance of Sukuk.',
     url: 'https://tarmeez.co/',
-    image: '/img/products-2.jpg',
+    image: 'https://media.raihsuite.com/RS0015/web/tarmeez-retalint.jpg',
     reverse: true,
   },
 ]
