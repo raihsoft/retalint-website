@@ -3,8 +3,8 @@ const stakeholders = [
     logo: 'https://media.raihsuite.com/RS0015/web/stakeholders/arrab-logo.jpeg',
     name: 'Arrab National Group',
     desc: 'The largest distributor of mobile communications service providers\' products and services',
-    url: 'https://arrabtelecom.com.sa/',
-    urlLabel: 'www.arrabtelecom.com.sa',
+    url: 'https://alarrab.com.sa/',
+    urlLabel: 'www.alarrab.com.sa',
   },
   {
     logo: 'https://media.raihsuite.com/RS0015/web/stakeholders/raihsoft.png',
