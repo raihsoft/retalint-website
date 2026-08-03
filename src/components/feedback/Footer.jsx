@@ -15,7 +15,9 @@ export default function Footer() {
   const scrollTo = (e, id) => {
     e.preventDefault()
     const el = document.getElementById(id)
-    if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' })
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   return (
@@ -26,7 +28,7 @@ export default function Footer() {
           <div className="col-12 col-lg-4">
             <div className="footer-logo">
               <a href="#home" onClick={(e) => scrollTo(e, 'home')}>
-                <img src="https://media.raihsuite.com/RS0015/web/logo-light.png" alt="Retal International Ltd." />
+                <img src="https://media.raihsuite.com/RS0015/web/retal-logo.avif" alt="Retal International Ltd." />
               </a>
             </div>
             <p className="footer-desc">

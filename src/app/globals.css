@@ -21,7 +21,11 @@ body {
 }
 
 a {
-  @apply text-brand-dark underline-offset-2 hover:underline;
+  @apply text-brand-dark;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
 }
 
 input, textarea {

@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react'
 
 const navLinks = [
@@ -18,21 +16,21 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 
-      // Highlight active nav link
-      const sections = navLinks.map(l => document.getElementById(l.href))
+      const sections = navLinks.map((link) => document.getElementById(link.href))
       const scrollPos = window.scrollY + 100
 
-      sections.forEach((section, i) => {
+      sections.forEach((section, index) => {
         if (!section) return
         if (
           section.offsetTop <= scrollPos &&
           section.offsetTop + section.offsetHeight > scrollPos
         ) {
-          setActiveLink(navLinks[i].href)
+          setActiveLink(navLinks[index].href)
         }
       })
     }
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -40,10 +38,38 @@ export default function Navbar() {
   const scrollToSection = (id) => {
     const el = document.getElementById(id)
     if (el) {
-      window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' })
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
     setMenuOpen(false)
   }
+
+  const renderLink = (link, extraClass = '') => (
+    <a
+      key={link.href}
+      href={`#${link.href}`}
+      className={`nav-link ${extraClass} ${activeLink === link.href ? 'active' : ''}`.trim()}
+      onClick={(e) => {
+        e.preventDefault()
+        scrollToSection(link.href)
+      }}
+    >
+      {link.label}
+    </a>
+  )
+
+  const renderContactLink = (extraClass = '') => (
+    <a
+      key="contact-us"
+      href="#contact-us"
+      className={`nav-link btn-contact-nav ${extraClass}`.trim()}
+      onClick={(e) => {
+        e.preventDefault()
+        scrollToSection('contact-us')
+      }}
+    >
+      Contact Us <i className="fas fa-arrow-right ms-1" style={{ fontSize: '0.75rem' }}></i>
+    </a>
+  )
 
   return (
     <nav className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}>
@@ -52,29 +78,14 @@ export default function Navbar() {
           {/* Logo */}
           <div className="nav-logo">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home') }}>
-              <img src="https://media.raihsuite.com/RS0015/web/logo-light.png" alt="Retal International Ltd." />
+              <img src="https://media.raihsuite.com/RS0015/web/retal-logo.avif" alt="Retal International Ltd." />
             </a>
           </div>
 
           {/* Desktop Nav */}
           <div className="d-none d-lg-flex align-items-center gap-1">
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={`#${link.href}`}
-                className={`nav-link ${activeLink === link.href ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.href) }}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact-us"
-              className="nav-link btn-contact-nav ms-3"
-              onClick={(e) => { e.preventDefault(); scrollToSection('contact-us') }}
-            >
-              Contact Us <i className="fas fa-arrow-right ms-1" style={{ fontSize: '0.75rem' }}></i>
-            </a>
+            {navLinks.map((link) => renderLink(link))}
+            {renderContactLink('ms-3')}
           </div>
 
           {/* Mobile Hamburger */}
@@ -92,23 +103,8 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="nav-collapse d-lg-none">
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={`#${link.href}`}
-                className={`nav-link d-block ${activeLink === link.href ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.href) }}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact-us"
-              className="nav-link btn-contact-nav d-inline-block mt-2"
-              onClick={(e) => { e.preventDefault(); scrollToSection('contact-us') }}
-            >
-              Contact Us <i className="fas fa-arrow-right ms-1" style={{ fontSize: '0.75rem' }}></i>
-            </a>
+            {navLinks.map((link) => renderLink(link, 'd-block'))}
+            {renderContactLink('d-inline-block mt-2')}
           </div>
         )}
       </div>
