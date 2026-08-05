@@ -1,9 +1,14 @@
 export default function Hero() {
-  const scrollToAbout = (e) => {
-    e.preventDefault()
-    const el = document.getElementById('about-us')
-    if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' })
-  }
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about-us");
+
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <section id="home" className="hero-section">
@@ -18,22 +23,26 @@ export default function Hero() {
       <div className="container hero-content">
         <div className="row">
           <div className="col-12 col-lg-7">
-            <span className="hero-label">Unique solutions for your unlimited dreams</span>
+            <span className="hero-label">
+              Unique solutions for your unlimited dreams
+            </span>
+
             <h1 className="hero-title">
-              A Vision for a<br />
+              A Vision for a <br />
               <span>Promising Future</span>
             </h1>
-            <a
-              href="#about-us"
+
+            <button
+              type="button"
               className="hero-scroll-btn"
               onClick={scrollToAbout}
               aria-label="Scroll to About Us"
             >
               <i className="fas fa-arrow-down"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
