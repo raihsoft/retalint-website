@@ -913,11 +913,12 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 99999;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(200,169,81,0.4);
+  pointer-events: auto;
 }
 
 .scroll-top-btn.visible {
