@@ -18,15 +18,50 @@ function ScrollTopButton() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setVisible(window.scrollY > 400)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const getScrollTop = () => {
+      const scrollingElement = document.scrollingElement || document.documentElement || document.body
+      return window.scrollY || scrollingElement?.scrollTop || document.body.scrollTop || 0
+    }
+
+    const handleScroll = () => setVisible(getScrollTop() > 0)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('wheel', handleScroll, { passive: true })
+    window.addEventListener('touchmove', handleScroll, { passive: true })
+    handleScroll()
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('wheel', handleScroll)
+      window.removeEventListener('touchmove', handleScroll)
+    }
   }, [])
+
+  const scrollToTop = () => {
+    if (typeof window === 'undefined') return
+
+    const scrollingElement = document.scrollingElement || document.documentElement || document.body
+    const targets = [scrollingElement, document.documentElement, document.body]
+
+    targets.forEach((target) => {
+      if (target && typeof target.scrollTo === 'function') {
+        target.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+      }
+      if (target) {
+        target.scrollTop = 0
+        target.scrollLeft = 0
+      }
+    })
+
+    const topSection = document.getElementById('home')
+    if (topSection && typeof topSection.scrollIntoView === 'function') {
+      topSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   return (
     <button
+      type="button"
       className={`scroll-top-btn ${visible ? 'visible' : ''}`}
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      onClick={scrollToTop}
       aria-label="Scroll to top"
     >
       <i className="fas fa-arrow-up"></i>
