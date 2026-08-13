@@ -8,8 +8,7 @@ export default function About() {
             <span className="section-divider center"></span>
             <span className="section-label">About Us</span>
             <h2 className="section-title">
-              We are committed to provide the best<br />
-              Information, Communication &amp; Technology solutions
+              We are committed to provide the best Information, Communication &amp; Technology solutions
             </h2>
           </div>
         </div>

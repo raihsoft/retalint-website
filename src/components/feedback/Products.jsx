@@ -27,7 +27,7 @@ export default function Products() {
             <span className="section-divider center"></span>
             <span className="section-label">Our Products</span>
             <h2 className="section-title">
-              Popular Products from our<br />in-house development
+              Popular Products from our in-house development
             </h2>
           </div>
         </div>
