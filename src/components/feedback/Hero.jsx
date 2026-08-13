@@ -28,8 +28,7 @@ export default function Hero() {
             </span>
 
             <h1 className="hero-title">
-              A Vision for a <br />
-              <span>Promising Future</span>
+              A Vision for a <span>Promising Future</span>
             </h1>
 
             <button
