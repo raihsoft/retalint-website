@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description: 'Leading ICT solutions provider in Saudi Arabia',
   icons: {
     icon: 'https://media.raihsuite.com/RS0015/web/favicon.png'
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
   }
 };
 
