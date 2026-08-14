@@ -87,7 +87,20 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>Retal International Co. Ltd. &copy; {new Date().getFullYear()}. All Rights Reserved.</p>
+<footer>
+  <p>
+    © 2026 Paneurostones LLP. All Rights Reserved. Designed & Developed by{" "}
+    <a
+      href="https://raihsoft.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="raihsoft-link"
+    >
+      Raihsoft
+    </a>
+    .
+  </p>
+</footer>
         </div>
       </div>
     </footer>
