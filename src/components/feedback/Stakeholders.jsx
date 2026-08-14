@@ -1,17 +1,18 @@
 const stakeholders = [
   {
-    logo: 'https://media.raihsuite.com/RS0015/web/stakeholders/arrab-logo.jpeg',
-    name: 'Arrab National Group',
-    desc: 'The largest distributor of mobile communications service providers\' products and services',
-    url: 'https://alarrab.com.sa/',
-    urlLabel: 'www.alarrab.com.sa',
-  },
-  {
+    
     logo: 'https://media.raihsuite.com/RS0015/web/stakeholders/raihsoft.png',
     name: 'Raihsoft Technologies',
     desc: 'A team of seasoned developers dedicated to crafting exceptional software, websites, and mobile applications tailored to your needs.',
     url: 'https://raihsoft.com/',
     urlLabel: 'www.raihsoft.com',
+  },
+  {
+    logo: 'https://media.raihsuite.com/RS0015/web/stakeholders/arrab-logo.jpeg',
+    name: 'Arrab National Group',
+    desc: 'The largest distributor of mobile communications service providers\' products and services',
+    url: 'https://alarrab.com.sa/',
+    urlLabel: 'www.alarrab.com.sa',
   },
 ]
 

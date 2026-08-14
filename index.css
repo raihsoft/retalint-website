@@ -1,5 +1,5 @@
 /* ============================================
-   RETAL INTERNATIONAL - GLOBAL STYLES
+    - GLOBAL STYLES
    ============================================ */
 
 *, *::before, *::after {
@@ -866,6 +866,15 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255,255,255,0.4);
   font-size: 0.85rem;
   margin: 0;
+}
+.raihsoft-link {
+  color: rgba(200, 169, 81, 0.88);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.raihsoft-link:hover {
+  color: rgba(200, 169, 81, 0.88);
 }
 
 /* ============================================
