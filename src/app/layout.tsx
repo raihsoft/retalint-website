@@ -3,8 +3,12 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.retalint.com'),
   title: 'Retal International Co. Ltd.',
   description: 'Leading ICT solutions provider in Saudi Arabia',
+  alternates: {
+    canonical: '/'
+  },
   icons: {
     icon: 'https://media.raihsuite.com/RS0015/web/favicon.png'
   },
